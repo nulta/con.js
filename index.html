@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scripts/con.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="scripts/fxdirector.js"></script>
+    <title>con.js</title>
+</head>
+
+<body>
+    <pre id="con" class="con">
+Hello, World!
+</pre>
+    <script src="scripts/con.js"></script>
+    <script>
+        (async ()=>{
+            const text = await con.input("Input: ")
+            fxDirector.playBgs("Wind_Plants.ogg")
+            await con.writeln(`You typed ${text}.`)
+        })();
+    </script>
+</body>
+
+</html>
